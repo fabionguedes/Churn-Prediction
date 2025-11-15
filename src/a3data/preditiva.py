@@ -1,3 +1,5 @@
+import os
+
 import pandas as pd
 import numpy as np
 from IPython.display import display
@@ -251,3 +253,30 @@ def ml_cv_results(model_name, model, X, y):
                         "F1": "{} +/- {}".format(f1_mean, f1_std),
                         "Kappa": "{} +/- {}".format(kappa_mean, kappa_std)},
                        index=[model_name])
+
+
+# Função para preparar o caminho de salvamento de arquivos
+def preparar_caminho_salvamento(output_dir, output_filename):
+    """
+    Verifica se um diretório de saída existe e o cria se necessário.
+    
+    Retorna o caminho completo (diretório + nome do arquivo) pronto
+    para ser usado em uma função de salvamento (ex: plt.savefig ou df.to_csv).
+
+    Argumentos:
+    output_dir (str): A pasta onde o arquivo deve ser salvo (ex: 'data/curated')
+    output_filename (str): O nome do arquivo (ex: 'meu_grafico.png')
+
+    Retorna:
+    str: O caminho completo para o arquivo (ex: 'data/curated/meu_grafico.png')
+    """
+    
+    # 1. Criar a pasta (e pastas 'pai' necessárias) se ela não existir.
+    #    'exist_ok=True' garante que o script não falhe se a pasta já existir.
+    os.makedirs(output_dir, exist_ok=True)
+    
+    # 2. Juntar o caminho da pasta e o nome do arquivo
+    output_file_path = os.path.join(output_dir, output_filename)
+    
+    # 3. Retornar o caminho completo
+    return output_file_path
