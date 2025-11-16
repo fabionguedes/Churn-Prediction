@@ -1,6 +1,6 @@
 Teste Técnico
 Ciência de Dados
-
+ 
 O teste técnico para a vaga de Cientista de Dados da A3Data consiste na
 exploração de uma base de dados com dados dos clientes e perfil de compra de
 uma empresa de telecomunicações acesse.
