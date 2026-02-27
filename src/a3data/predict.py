@@ -4,7 +4,7 @@ import joblib
 
 # Importando as funções que criamos na Fase 1! 
 # (Ajuste o import 'src.preprocessing' se a sua estrutura de pastas for diferente)
-from preprocessing import clean_numeric_features, drop_low_iv_features
+from src.a3data.preprocessing import clean_numeric_features, drop_low_iv_features
 
 def load_production_model(model_path: str):
     """Carrega o modelo treinado (pipeline) do disco."""

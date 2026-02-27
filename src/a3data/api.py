@@ -6,7 +6,7 @@ import joblib
 import os
 
 # Importando nossas funções de produção
-from preprocessing import clean_numeric_features, drop_low_iv_features
+from src.a3data.preprocessing import clean_numeric_features, drop_low_iv_features
 
 # Inicializa o app FastAPI
 app = FastAPI(
