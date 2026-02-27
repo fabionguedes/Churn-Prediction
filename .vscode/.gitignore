@@ -1,0 +1,16 @@
+# Ignorar ambientes virtuais
+.venv/
+venv/
+env/
+
+# Ignorar arquivos temporários do Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Ignorar base de dados (opcional, mas recomendado se for grande)
+# Se quiser mostrar a base curada no github, comente a linha abaixo
+# data/
+
+# Ignorar arquivos do Mac
+.DS_Store
