@@ -16,7 +16,11 @@ app = FastAPI(
 )
 
 # Caminho do modelo (ajuste se necessário)
-MODEL_PATH = '/Users/guedesf/Documents/Data Science/Projetos/a3data/models/champion_xgb_pipeline.pkl'
+# Descobre a pasta raiz do projeto de forma dinâmica
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+# Monta o caminho para a pasta models independentemente de onde o código está rodando
+MODEL_PATH = os.path.join(BASE_DIR, 'models', 'champion_xgb_pipeline.pkl')
 
 # Variável global para armazenar o modelo na memória quando a API iniciar
 modelo_producao = None
