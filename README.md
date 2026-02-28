@@ -43,7 +43,7 @@ Deploy: API servida com FastAPI e hospedada continuamente via CI/CD no Render.
 
 🛠️ Como executar o projeto localmente
 1. Clonar e Instalar
-# Clone o repositório
+## Clone o repositório
 git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
 cd SEU_REPOSITORIO
 
